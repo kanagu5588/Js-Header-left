@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Alkatra&family=Bai+Jamjuree&family=Labrada&family=PT+Sans&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family: 'Alkatra', cursive;
+}
+:root{
+    --header-color:rgb(66, 196, 185);
+    --h1-font:30px;
+    --primary-font-size:25px;
+    --navlinks-font-color:#280c38;
+}
+
+header{
+    height: 100px;
+    width: 100%;
+    background-color: var(--header-color);
+    position: relative;
+}
+.logo{
+    height: 70px;
+    width: 15%;
+    position: absolute;
+    top: 15px;
+    
+    
+}
+.logo h1{
+    font-size: var(--h1-font);
+    text-align: center;
+    margin-top: 10px;
+}
+.navlinks{
+    height: 80px;
+    width: 50%;
+    
+    position: absolute;
+    left: 50%;
+    top: 10px;
+}
+.navlinks li{
+    display: inline-flex;
+}
+.navlinks a{
+    
+    font-size: var(--primary-font-size);
+    font-weight: bold;
+    margin-left: 30px;
+    position: relative;
+    left: 8rem;
+    top: 20px;
+    color: var(--navlinks-font-color);
+}
+.barmenu{
+    display: none;
+}
+
+@media  (max-width:500px) {
+    .logo{
+        height: 70px;
+        width: 30%;
+        position: absolute;
+        left: 20px;  
+    }
+ 
+    .navlinks{
+        height: 240px;
+        width: 100%;
+        display: block;
+        position: fixed;
+        left: -100%;
+        top: 15%;
+        background-color: var(--header-color);
+    }
+    .navlinks ul{
+        text-align: center;
+    }   
+    .navlinks li{
+        display: block;
+    }
+
+    .navlinks a{
+        margin-left: 0px;
+        left: 0rem;
+    }
+    .navlinks a:hover{
+        padding: 3px 10px;
+        background-color: var(--navlinks-font-color);
+        color: #ffffff;
+        border-radius: 10px;
+    }
+
+    .barmenu{
+        display: block;
+        position: absolute;
+        bottom: 25%;
+        font-size: var(--primary-font-size);
+        left: 90%;
+    }
+    .showmenu{
+        display: block;
+        transition: 5s;
+        left: 0;
+    }
+}
